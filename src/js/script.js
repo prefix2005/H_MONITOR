@@ -52,4 +52,26 @@ $(document).ready(function(){
         $('.overlay, #order').fadeIn('slow');
       })
     });
+
+    $('#consultation-form').validate();
+    $('#consultation form').validate({
+      rules: {
+        name: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Пожалуйста",
+        phone: "телефон гони",
+        email: {
+          required: "Хуй",
+          email: "Хуй"
+        }
+      }
+    });
+    $('#order form').validate();
+    
 });
